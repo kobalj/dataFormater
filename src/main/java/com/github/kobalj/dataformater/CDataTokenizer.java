@@ -37,12 +37,12 @@ public class CDataTokenizer implements IDataTokenizer {
 
     private CharBuffer buff;
     private boolean moreTokens = true;
-    private final char delimeter;
+    private final char delimiter;
     private final boolean toWindowsFormat;
     private char[] currentToken;
 
-    public CDataTokenizer(char pDelimeter, boolean pToWindowsFormat) {
-        this.delimeter = pDelimeter;
+    public CDataTokenizer(char pDelimiter, boolean pToWindowsFormat) {
+        this.delimiter = pDelimiter;
         this.toWindowsFormat = pToWindowsFormat;
     }
     
@@ -75,7 +75,7 @@ public class CDataTokenizer implements IDataTokenizer {
             }
             char b = buff.get();
 
-            if (b == delimeter) {
+            if (b == delimiter) {
                 moreTokens = buff.remaining() > 0;
                 break;
             } else {
@@ -103,8 +103,8 @@ public class CDataTokenizer implements IDataTokenizer {
     }
 
     @Override
-    public char getDelimeter() {
-        return this.delimeter;
+    public char getDelimiter() {
+        return this.delimiter;
     }
 
     @Override

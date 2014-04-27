@@ -30,7 +30,8 @@ import java.nio.CharBuffer;
 
 /**
  *
- * @author Jure Kobal Parameter parser for data where the parameter is defined
+ * @author Jure Kobal 
+ * Parameter parser for data where the parameter is defined
  * with the following stucture: ${<paramName>:<fallBack value>} where the
  * paramName is used to get the method to resolv the content and fallBack value
  * is used in case the resolver could not resolve the parameter into value.

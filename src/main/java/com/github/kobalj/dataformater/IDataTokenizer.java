@@ -42,7 +42,7 @@ public interface IDataTokenizer {
 
     public boolean hasMoreTokens();
     
-    public char getDelimeter();
+    public char getDelimiter();
     
     public boolean isToWindowsFormat();
 }

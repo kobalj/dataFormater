@@ -80,13 +80,13 @@ public class CDataFormater implements IDataFormater {
             }
             // Add delimeter at the end of each token
             if (dataTokenizer.hasMoreTokens()) {
-                cw.write(dataTokenizer.getDelimeter());
+                cw.write(dataTokenizer.getDelimiter());
             }
             parameterParser.clearInputData();
         }
         char[] lastToken = dataTokenizer.readCurrentToken();
         if (!(lastToken != null && lastToken.length == 2 && lastToken[0] == '\r' && lastToken[1] == '\n')) {
-            cw.write(dataTokenizer.getDelimeter());
+            cw.write(dataTokenizer.getDelimiter());
 
             if (addNewLine && dataTokenizer.isToWindowsFormat()) {
                 cw.write(new char[]{'\r', '\n'});
